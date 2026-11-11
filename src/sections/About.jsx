@@ -50,9 +50,9 @@ BRIDGING THE GAP BETWEEN BUSINESS AND TECHNOLOGY`;
       <div className="flex flex-col items-center justify-between gap-16 px-10 pb-16 text-xl font-light tracking-wide lg:flex-row md:text-2xl lg:text-3xl text-white/60">
         <img
           ref={imgRef}
-          src="/images/man.jpg"
-          alt="man"
-          className="w-md rounded-3xl"
+          src={`${import.meta.env.BASE_URL}images/man.jpg`}
+          alt="Yashwant K"
+          className="w-md rounded-3xl object-cover"
         />
         <AnimatedTextLines text={aboutText} className={"w-full"} />
       </div>

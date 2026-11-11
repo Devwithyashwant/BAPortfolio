@@ -7,11 +7,13 @@ import { useGLTF } from "@react-three/drei";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
+const modelPath = `${import.meta.env.BASE_URL}models/Planet.glb`;
+
 export function Planet(props) {
   const shapeContainer = useRef(null);
   const shperesContainer = useRef(null);
   const ringContainer = useRef(null);
-  const { nodes, materials } = useGLTF("/models/Planet.glb");
+  const { nodes, materials } = useGLTF(modelPath);
 
   useGSAP(() => {
     if (!shapeContainer.current || !shperesContainer.current || !ringContainer.current) return;
@@ -78,4 +80,4 @@ export function Planet(props) {
   );
 }
 
-useGLTF.preload("/models/Planet.glb");
+useGLTF.preload(modelPath);
