@@ -15,18 +15,20 @@ TO HELP TEAMS MAKE SMARTER BUSINESS DECISIONS.`;
       if (!el) return;
 
       gsap.from(el, {
-        y: 200,
+        y: 100,
         scrollTrigger: {
           trigger: el,
-          start: "top 80%",
+          start: "top 85%",
+          once: true,
         },
-        duration: 1,
+        duration: 0.8,
         ease: "circ.out",
+        clearProps: "transform",
       });
     });
   }, []);
   return (
-    <section id="services" className="min-h-screen bg-black rounded-t-4xl">
+    <section id="services" className="min-h-screen bg-black rounded-t-4xl pb-16">
       <AnimatedHeaderSection
         subTitle={"BEHIND THE DATA, BEYOND THE NUMBERS"}
         title={"Service"}
@@ -46,8 +48,8 @@ TO HELP TEAMS MAKE SMARTER BUSINESS DECISIONS.`;
                   marginBottom: `${(servicesData.length - index - 1) * 5}rem`,
                 }
               : {
-                  top: `calc(4rem + ${index * 1.5}rem)`,
-                  marginBottom: `${(servicesData.length - index - 1) * 2}rem`,
+                  top: `calc(8vh + ${index * 3.5}em)`,
+                  marginBottom: `${(servicesData.length - index - 1) * 3.5}rem`,
                 }
           }
         >
