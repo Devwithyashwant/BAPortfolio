@@ -38,33 +38,38 @@ TO HELP TEAMS MAKE SMARTER BUSINESS DECISIONS.`;
         <div
           ref={(el) => (serviceRefs.current[index] = el)}
           key={index}
-          className="sticky px-10 pt-6 pb-12 text-white bg-black border-t-2 border-white/30"
+          className="sticky px-5 sm:px-10 pt-6 pb-10 sm:pb-12 text-white bg-black border-t-2 border-white/30 shadow-2xl"
           style={
             isDesktop
               ? {
                   top: `calc(10vh + ${index * 5}em)`,
                   marginBottom: `${(servicesData.length - index - 1) * 5}rem`,
                 }
-              : { top: 0 }
+              : {
+                  top: `calc(4rem + ${index * 1.5}rem)`,
+                  marginBottom: `${(servicesData.length - index - 1) * 2}rem`,
+                }
           }
         >
           <div className="flex items-center justify-between gap-4 font-light">
-            <div className="flex flex-col gap-6">
-              <h2 className="text-4xl lg:text-5xl">{service.title}</h2>
-              <p className="text-xl leading-relaxed tracking-widest lg:text-2xl text-white/60 text-pretty">
+            <div className="flex flex-col gap-4 sm:gap-6 w-full">
+              <h2 className="text-2xl sm:text-3xl lg:text-5xl font-light leading-snug">
+                {service.title}
+              </h2>
+              <p className="text-sm sm:text-base lg:text-xl leading-relaxed tracking-normal sm:tracking-wide text-white/60 text-pretty">
                 {service.description}
               </p>
-              <div className="flex flex-col gap-2 text-2xl sm:gap-4 lg:text-3xl text-white/80">
+              <div className="flex flex-col gap-2 text-base sm:text-xl lg:text-3xl text-white/80 mt-2">
                 {service.items.map((item, itemIndex) => (
                   <div key={`item-${index}-${itemIndex}`}>
-                    <h3 className="flex">
-                      <span className="mr-12 text-lg text-white/30">
+                    <h3 className="flex items-baseline">
+                      <span className="mr-5 sm:mr-12 text-xs sm:text-base text-white/40 font-mono">
                         0{itemIndex + 1}
                       </span>
-                      {item.title}
+                      <span>{item.title}</span>
                     </h3>
                     {itemIndex < service.items.length - 1 && (
-                      <div className="w-full h-px my-2 bg-white/30" />
+                      <div className="w-full h-px my-2 bg-white/20" />
                     )}
                   </div>
                 ))}

@@ -28,7 +28,7 @@ const Hero = () => {
 clear insights, smarter decisions
 and measurable growth.`;
   return (
-    <section id="home" className="flex flex-col justify-end min-h-screen">
+    <section id="home" className="relative flex flex-col justify-end min-h-[100dvh] overflow-hidden">
       <AnimatedHeaderSection
         subTitle={"Business Analyst"}
         title={"Yashwant K"}
@@ -36,18 +36,17 @@ and measurable growth.`;
         textColor={"text-black"}
       />
       <figure
-        className="absolute inset-0 -z-50 pointer-events-none"
-        style={{ width: "100vw", height: "100vh" }}
+        className="absolute inset-0 -z-50 pointer-events-none w-full h-[100dvh] overflow-hidden"
       >
         <CanvasErrorBoundary>
           <Canvas
             shadows
-            camera={{ position: [0, 0, -10], fov: 17.5, near: 1, far: 20 }}
+            camera={{ position: isMobile ? [0, 0.3, -10] : [0, 0, -10], fov: isMobile ? 20 : 17.5, near: 1, far: 20 }}
           >
           <ambientLight intensity={0.5} />
           <Suspense fallback={null}>
             <Float speed={0.5}>
-              <Planet scale={isMobile ? 0.7 : 1} />
+              <Planet scale={isMobile ? 0.62 : 1} />
             </Float>
             <Environment resolution={256}>
               <group rotation={[-Math.PI / 3, 4, 1]}>

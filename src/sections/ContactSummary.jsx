@@ -21,14 +21,15 @@ const ContactSummary = () => {
   ];
 
   useGSAP(() => {
+    const isMobile = window.innerWidth < 768;
     gsap.to(containerRef.current, {
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "center center",
-        end: "+=800 center",
+        start: isMobile ? "top 80%" : "center center",
+        end: isMobile ? "+=300 center" : "+=800 center",
         scrub: 0.5,
-        pin: true,
-        pinSpacing: true,
+        pin: !isMobile,
+        pinSpacing: !isMobile,
         markers: false,
       },
     });
@@ -36,10 +37,10 @@ const ContactSummary = () => {
   return (
     <section
       ref={containerRef}
-      className="flex flex-col items-center justify-between min-h-screen gap-12 mt-16"
+      className="flex flex-col items-center justify-between min-h-[50vh] md:min-h-screen gap-8 md:gap-12 mt-8 md:mt-16"
     >
       <Marquee items={items} />
-      <div className="overflow-hidden font-light text-center contact-text-responsive">
+      <div className="overflow-hidden font-light text-center px-4 sm:px-8 contact-text-responsive">
         <p>
           “ Let's solve <br />
           <span className="font-normal">business challenges</span> &{" "}

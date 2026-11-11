@@ -47,14 +47,14 @@ BRIDGING THE GAP BETWEEN BUSINESS AND TECHNOLOGY`;
         textColor={"text-white"}
         withScrollTrigger={true}
       />
-      <div className="flex flex-col items-center justify-between gap-16 px-10 pb-16 text-xl font-light tracking-wide lg:flex-row md:text-2xl lg:text-3xl text-white/60">
+      <div className="flex flex-col items-center justify-between gap-8 sm:gap-16 px-5 sm:px-10 pb-12 sm:pb-16 text-base sm:text-xl lg:text-2xl font-light tracking-wide lg:flex-row text-white/70">
         <img
           ref={imgRef}
           src={`${import.meta.env.BASE_URL}images/man.jpg`}
           alt="Yashwant K"
-          className="w-md rounded-3xl object-cover"
+          className="w-full max-w-xs sm:max-w-sm lg:max-w-md rounded-2xl sm:rounded-3xl object-cover shadow-2xl aspect-[4/5] shrink-0"
         />
-        <AnimatedTextLines text={aboutText} className={"w-full"} />
+        <AnimatedTextLines text={aboutText} className={"w-full text-base sm:text-lg lg:text-2xl"} />
       </div>
     </section>
   );

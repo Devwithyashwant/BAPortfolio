@@ -40,19 +40,19 @@ I'D LOVE TO CONNECT AND EXPLORE HOW I CAN ADD VALUE.`;
           textColor={"text-white"}
           withScrollTrigger={true}
         />
-        <div className="flex px-10 font-light text-white uppercase lg:text-[32px] text-[26px] leading-none mb-10">
-          <div className="flex flex-col w-full gap-10">
+        <div className="flex px-5 sm:px-10 font-light text-white uppercase text-xl sm:text-[26px] lg:text-[32px] leading-none mb-8 sm:mb-10">
+          <div className="flex flex-col w-full gap-6 sm:gap-10">
             <div className="social-link">
-              <h2>E-mail</h2>
+              <h2 className="text-lg sm:text-2xl lg:text-3xl">E-mail</h2>
               <div className="w-full h-px my-2 bg-white/30" />
-              <p className="text-xl tracking-wider lowercase md:text-2xl lg:text-3xl">
+              <p className="text-base sm:text-xl md:text-2xl lg:text-3xl tracking-normal sm:tracking-wider lowercase break-all">
                 Yashwantk.dev@gmail.com
               </p>
             </div>
             <div className="social-link">
-              <h2>Phone</h2>
+              <h2 className="text-lg sm:text-2xl lg:text-3xl">Phone</h2>
               <div className="w-full h-px my-2 bg-white/30" />
-              <p className="text-xl lowercase md:text-2xl lg:text-3xl">
+              <p className="text-base sm:text-xl md:text-2xl lg:text-3xl lowercase">
                 +91 9980915480
               </p>
             </div>

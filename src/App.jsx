@@ -11,8 +11,8 @@ import Contact from "./sections/Contact";
 
 const App = () => {
   return (
-    <ReactLenis root className="relative w-screen min-h-screen overflow-x-auto">
-      <div className="relative w-full opacity-100">
+    <ReactLenis root className="relative w-full min-h-screen overflow-x-hidden">
+      <div className="relative w-full opacity-100 overflow-x-hidden">
         <Navbar />
         <Hero />
         <ServiceSummary />
