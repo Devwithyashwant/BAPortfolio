@@ -1,0 +1,6 @@
+{
+  "name": "Awwwards Portfolio",
+  "description": "Interactive 3D creative developer portfolio featuring Three.js, React Three Fiber, GSAP animations, and Lenis smooth scrolling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
